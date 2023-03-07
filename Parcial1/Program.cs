@@ -4,12 +4,16 @@
 using Parcial1.Entidades;
 using Parcial1.Negocio;
 
-using System;
+
 
 Usuario usuario = new Usuario();
 ClsUsuario clsUsuario = new ClsUsuario();
+
 Ventas venta = new Ventas();
 ClsVentas clsVentas = new ClsVentas();
+
+
+
 
 Console.WriteLine("Por favor ingrese su nombre ");
 usuario.Nombre = Console.ReadLine();
@@ -19,11 +23,11 @@ usuario.Contraseña = Console.ReadLine();
 
 
 
-bool Resultado = clsUsuario.Autenticacion(usuario);
+bool Resultado = clsUsuario.Acreditacion(usuario);
 if (Resultado == true)
 {
     
-    Console.WriteLine("Bienvenido a la tienda WORLD MAGIC ");
+    Console.WriteLine("Bienvenid@ a la tienda MAGICAL WORLD ");
     Console.WriteLine("Siente el espiritu de la magia");
 
     Console.Write("\nPor favor introdusca identificador del producto: ");
@@ -42,11 +46,11 @@ if (Resultado == true)
     venta.CantidadProducto = Convert.ToInt32(Console.ReadLine());
 
     Console.WriteLine($@"El Identificador del producto es: {venta.IdentificadorProducto}
-El producto que va comprar es: {venta.NombreProducto}
+    El producto que va comprar es: {venta.NombreProducto}
 
-El valor que tiene el producto es: {venta.PrecioProducto}
+    El valor que tiene el producto es: {venta.PrecioProducto}
 
-El total que tendra que cancelar es: {clsVentas.Cobro(venta)}");
+    El total que tendra que cancelar es: {clsVentas.Pago(venta)}");
 
 }
 else

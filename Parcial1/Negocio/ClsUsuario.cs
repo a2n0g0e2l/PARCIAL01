@@ -9,8 +9,7 @@ namespace Parcial1.Negocio
     public class ClsUsuario
     {
 
-
-      public bool Autenticacion(Usuario user)
+      public bool Acreditacion(Usuario user)
 
         {
             if (user.Nombre.Equals("TUNOMBRE") && user.Contraseña.Equals("123"))

@@ -8,8 +8,8 @@ namespace Parcial1.Entidades
     public class Ventas
     {
         public int IdentificadorProducto { get; set; }
-        public String? NombreProducto { get; set; }
-        public String? DescripcionProducto { get; set; }
+        public String NombreProducto { get; set; } = "";
+        public String DescripcionProducto { get; set; } = "";
         public double PrecioProducto { get; set; }
         public int CantidadProducto { get; set; }
 

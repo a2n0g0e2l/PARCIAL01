@@ -10,7 +10,7 @@ namespace Parcial1.Negocio
     {
     
     
-        public String Cobro(Ventas ven)
+        public String Pago(Ventas ven)
 
 
         {
@@ -23,7 +23,7 @@ namespace Parcial1.Negocio
             }
             else
             {
-                return $"Lo sentimos mucho no aplica el descuento ya que no compra no cumple el requisito a pagar ${AplicarDesc}";
+                return $"Lo sentimos mucho no aplica el descuento ya que no compra lo establecido no cumple el requisito para recibir descuento ${AplicarDesc}";
             }
         }
         
