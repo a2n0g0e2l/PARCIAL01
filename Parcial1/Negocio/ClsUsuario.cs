@@ -8,29 +8,16 @@ namespace Parcial1.Negocio
 {
     public class ClsUsuario
     {
-        public bool Acceso(string Nombre, string Contraseña)
-        {
-            return Nombre == "Tunombre" && Contraseña == "123";
-        }
-    }
 
-    public class ClsVenta
-    {
-        public void Cobro(Venta venta)
-        {
-            decimal total = venta.PrecioDProducto * venta.CantidadDProducto;
 
-            if (total > 50)
+      public bool Autenticacion(Usuario user)
+
+        {
+            if (user.Nombre.Equals("TUNOMBRE") && user.Contraseña.Equals("123"))
             {
-                total -= 10;
-                Console.WriteLine($"Precio original: ${venta.PrecioDProducto * venta.CantidadDProducto}");
-                Console.WriteLine($"Descuento que se aplico: $10");
-                Console.WriteLine($"Total a cancelar: ${total}");
+                return true;
             }
-            else
-            {
-                Console.WriteLine($"Total a pagar. ${total}");
-            }
-        }
+            return false;
+        } 
     }
 }
